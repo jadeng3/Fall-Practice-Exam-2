@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://jsdi1um6pgib"]
+[gd_scene load_steps=5 format=3 uid="uid://jsdi1um6pgib"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_6av43"]
 [ext_resource type="Texture2D" uid="uid://dhbv6eyh45c07" path="res://icon.svg" id="1_ffjll"]
+[ext_resource type="PackedScene" uid="uid://mikclmd4tgm0" path="res://enemy.tscn" id="3_ftt0g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rule"]
 size = Vector2(124, 126)
@@ -17,3 +18,6 @@ texture = ExtResource("1_ffjll")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_3rule")
+
+[node name="Enemy" parent="." instance=ExtResource("3_ftt0g")]
+position = Vector2(803, 288)
